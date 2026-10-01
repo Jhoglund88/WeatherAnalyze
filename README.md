@@ -56,7 +56,7 @@ Jag har använt AI som en studiehandledare och som stöd för syntax, felsöknin
 När jag inte har förstått kod eller förslag från AI har jag ställt följdfrågor och gått igenom koden för att förstå hur den fungerar.
 
 ## Github-länk
-https://github.com/Jhoglund88/WeatherAnalzye
+https://github.com/Jhoglund88/WeatherAnalyze
 
 ## Installation/körning
 

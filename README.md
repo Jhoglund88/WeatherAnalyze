@@ -2,7 +2,7 @@
 Ett Pythonprojekt som låter användaren hämta väderdata från en av tre städer via ett API och analyserar insamlad data.
 
 ## Mål
-Mitt mål är att göra en enkel väderapp där användaren genom en meny får välja en stad som den vill hämta väderinfo om. Därefter så ska väderdata hämtas med hjälp av ett API-anrop och sedan sparas ner i JSON-format för att senare kunna bearbetas, analyseras och visualiseras.
+Mitt mål är att göra en enkel väderapp där användaren genom en meny får välja en stad som den vill hämta väderinfo om. Därefter så ska sjudagarsprognos hämtas med hjälp av ett API-anrop och sedan sparas ner i JSON-format för att senare kunna bearbetas, analyseras och visualiseras.
 
 Projektet tränar datainsamling och databearbetning som kan ingå i förberedelsen av data för AI-system och har därför en tydlig koppling till AI-utvecklarrollen.
 
@@ -16,17 +16,10 @@ Projektet tränar datainsamling och databearbetning som kan ingå i förberedels
 7. Rensa och normalisera värden som förberedelse för eventuell framtida AI-användning.
 
 ## Resultat
-Vid körningen den 1 oktober 2026 hämtades 24 timprognoser för Stockholm med temperatur och vindhastighet.
 
-- Temperatur: Lägst 13,6 °C, högst 18,2 °C, medel 15,4 °C.
-- Vind: lägst 10,1 km/h, högst 16,9 km/h, medel 13,0 km/h.
-
-Prognosen sparades i JSON med metadata och visades i diagram. I ett separat steg rensades och normaliserades värdena till 0-1.
 
 ## Analys
-Prognosen visar dagens variationer i temperatur och vind. Projektets datainsamling och bearbetning är relevanta för AI-utvecklare och automatiserade dataflöden, exempelvis inom transport och energi.
 
-Datan är en prognos, inte mätningar. En enda dag räcker inte för långsiktiga slutsatser, och projektet använder ingen egen AI-modell.
 
 ## Certifikat
 PCEP certifierar grundläggande Pythonkunskaper. PCAP omfattar även objektorientering och filhantering. Båda kopplar till mitt projekt. Vid framtida utveckling i molnet kan certifieringar från AWS eller Azure bli relevanta.
@@ -37,9 +30,9 @@ Det svåraste var att få ihop flödet mellan API-anropet, objekten och sparning
 
 Nästa gång skulle jag vilja utveckla programmet så att användaren kan hämta prognoser för fler städer och välja fler typer av väderdata att analysera. 
 
-Vid upprepade körningar för samma stad kan flera väderposter med samma tidpunkt sparas. Nästa gång skulle jag kontrollera kombinationen stad och tidpunkt och uppdatera befintliga poster i stället för att lägga till dubbletter.
+Jag tänkte först spara flera prognoser men valde denna lösning nu för att förenkla programmet, därför kan en framtida förbättring bli att spara historiken.
 
-Jag valde JSON eftersom väderdata och metadata kan sparas tillsammans i en tydlig struktur. Hela filen läses och skrivs om vid varje körning, men tidigare väderposter behålls och nya läggs till. Det passar sämre för stora datamängder.
+Jag valde JSON eftersom väderdata och metadata kan sparas tillsammans i en tydlig struktur. 
 
 Arv gör att DetailedWeather kan återanvända attribut från Weather och lägga till vindhastighet. Det minskar upprepning, men för en så liten lösning hade en enda klass med valbar vindinformation också varit möjlig.
 

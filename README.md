@@ -1,10 +1,8 @@
 # WeatherAnalyze
-Ett Pythonprojekt som låter användaren hämta väderdata från en av tre städer via ett API och analyserar insamlad data.
+Ett Pythonprojekt som låter användaren hämta väderdata från en av tre städer via ett API och analyserar och sparar insamlad data.
 
 ## Mål
-Mitt mål är att göra en enkel väderapp där användaren genom en meny får välja en stad som den vill hämta väderinfo om. Därefter så ska sjudagarsprognos hämtas med hjälp av ett API-anrop och sedan sparas ner i JSON-format för att senare kunna bearbetas, analyseras och visualiseras.
-
-Projektet tränar datainsamling och databearbetning som kan ingå i förberedelsen av data för AI-system och har därför en tydlig koppling till AI-utvecklarrollen.
+Jag vill skapa en väderapp som hämtar en vald stads sjudagarsprognos via API och sparar den i JSON för planering och analys. Projektet visar datainsamling och förberedelse av data inför eventuell AI-användning.
 
 ## Metod
 1. Låta användaren välja en stad att hämta väderinfo om samt välja om detaljerad information ska visas.
@@ -16,37 +14,32 @@ Projektet tränar datainsamling och databearbetning som kan ingå i förberedels
 7. Rensa och normalisera värden som förberedelse för eventuell framtida AI-användning.
 
 ## Resultat
+Programmet hämtade och sparade en sjudagarsprognos för 2-8 oktober (temperatur/vind) i Stockholm i en JSON-fil den 2 Oktober 2026.
 
+Resultat för temperatur:
+Lägsta: 7,6 °C
+Högsta: 18,1 °C
+Medel: 12,7 °C
+
+Resultat för vind:
+
+Lägsta: 1,0 km/h
+Högsta: 25,5 km/h
+Medel: 13,9 km/h
 
 ## Analys
-
+I veckoprognosen varierar temperaturen i Stockholm mellan 7 och 18 °C och sjunker under natten. Vinden varierar mellan 1 och 25 km/h utan ett lika tydligt mönster. Eftersom prognosen bara gäller en stad och en vecka går det inte att dra långsiktiga slutsatser.
 
 ## Certifikat
-PCEP certifierar grundläggande Pythonkunskaper. PCAP omfattar även objektorientering och filhantering. Båda kopplar till mitt projekt. Vid framtida utveckling i molnet kan certifieringar från AWS eller Azure bli relevanta.
+PCEP certifierar grundläggande Pythonkunskaper. PCAP omfattar även objektorientering och filhantering. Båda är relevanta för mitt projekt. Vid framtida utveckling i molnet kan certifieringar från AWS eller Azure bli relevanta.
 
 ## Reflektion
 
-Det svåraste var att få ihop flödet mellan API-anropet, objekten och sparningen till JSON samt att förstå hur felhanteringen skulle byggas upp. Under projektets gång har jag fått en bättre förståelse för hur data hämtas från ett API och sedan kan bearbetas och sparas.
-
-Nästa gång skulle jag vilja utveckla programmet så att användaren kan hämta prognoser för fler städer och välja fler typer av väderdata att analysera. 
-
-Jag tänkte först spara flera prognoser men valde denna lösning nu för att förenkla programmet, därför kan en framtida förbättring bli att spara historiken.
-
-Jag valde JSON eftersom väderdata och metadata kan sparas tillsammans i en tydlig struktur. 
-
-Arv gör att DetailedWeather kan återanvända attribut från Weather och lägga till vindhastighet. Det minskar upprepning, men för en så liten lösning hade en enda klass med valbar vindinformation också varit möjlig.
+Det gick bra att skapa funktioner, klasser och datarensning. Det svåraste var att koppla ihop API, objekt, JSON och felhantering, men det gav mig bättre förståelse för dataflödet. Jag valde JSON för att samla prognos och metadata. Arv minskar upprepning, även om en klass hade räckt för projektets storlek. Nästa steg är fler städer, vädervariabler och sparad historik.
 
 ## Användning av AI
 
-Jag har använt AI som en studiehandledare och som stöd för syntax, felsökning och granskning av kod. I vissa delar har AI föreslagit kod som jag har gått igenom, anpassat och använt i projektet. Jag har framför allt fått hjälp med:
-
-- API-anropet och de parametrar som används för att hämta väderdata.
-- Syntax och felhantering vid sparning till JSON samt metadata.
-- Syntax för diagram och normalisering av data.
-- Granskning och felsökning av befintlig kod.
-- Formulering och granskning av markdowntexter.
-
-När jag inte har förstått kod eller förslag från AI har jag ställt följdfrågor och gått igenom koden för att förstå hur den fungerar.
+Jag har använt AI som stöd för syntax vid API-anrop, felhantering, JSON, diagram. Har låtit Ai göra felsökning. Jag har granskat och anpassat AI-förslag samt ställt följdfrågor när jag behövt förstå koden bättre.
 
 ## Github-länk
 https://github.com/Jhoglund88/WeatherAnalyze
